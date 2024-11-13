@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <style>
+        .welcome{
+            color: Red;
+        }
+        #intro{
+            color: green;
+        }
+        .btn1{
+            color: white;
+            background-color: #6767c0;
+            border-radius: 25px;
+            padding: 10px;
+            width: 90px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1 class="welcome" datatest-id="hello">Hello</h1>
+    <h2 data-cy="test1">Test</h2>
+    <p id="intro">test test </p>
+    <button test-id="button1" class="btn1">OK</button>
+
+    <div>
+        <p>Test</p>
+        <a>
+            <p>test2</p>
+        </a>
+        <label>ppp</label>
+        <p>test3</p>
+    </div>
+    <p>yyyy</p>
+
+    
+
+    cy.get("buttons,p") 
+    cy.get("button") // 50 
+    cy.get("p") // 100 
+    cy.get("button,p")
+    div+p 
+</body>
+</html>
