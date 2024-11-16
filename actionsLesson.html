@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Testing Page</title>
+    <style>
+      body{
+        background-color: azure;
+      }
+      .container {
+        margin: 20px;
+        padding: 20px;
+        font-size: 20px;
+      }
+      .center{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #simple_par {
+        color: #9374ab;
+        font-size: 30px;
+        font-weight: bold;
+      }
+     .btn {
+        background: #9374ab;
+    padding: 10px;
+    margin: 10px;
+    display: inline;
+    font-size: 15px;
+    border: none;
+    color: wheat;
+    border-radius: 5px;
+      }
+      input {
+        padding: 5px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 2px solid #9374ab;
+      }
+      h6{
+        color: gray;
+      }
+
+    .div_content{
+      padding: 20px;
+    position: relative;
+    }
+
+    .box{
+        width:100%;
+        background-color:#9230886b;
+        height:56px;
+        left: 0;
+        top: -8px;
+        position:absolute;
+    }
+    .overlay{
+        position: absolute;
+        z-index: -1;
+    }
+
+      </style>
+    <script>
+      function clickBtn0() {
+        document.getElementById("btn0").innerHTML = "ZeroBtn Clicked";
+      }
+      function clickBtn1() {
+        document.getElementById("btn1").innerHTML = "FirstBtn Clicked";
+      }
+      function clickBtn2() {
+        document.getElementById("btn2").innerHTML = "SecondBtn Clicked";
+      }
+      function clickBtn3() {
+        document.getElementById("btn3").innerHTML = "ThirdBtn Clicked";
+      }
+      function dbClickButton() {
+    document.getElementById("dbClick").innerHTML = "Double Click !";
+    }
+    function changeInputColor(x) {
+     x.style.background = "yellow";
+    }
+    function changeInputColor1(x) {
+     x.style.background = "Red";
+    }
+
+    function changeBtnColor(x) {
+      x.style.background= "yellow";
+      x.style.color= "black";
+    }
+
+    function maximizeBtn(x) {
+      x.style.background= "#9374ab";
+      x.style.width = "150px";
+    }
+  
+      </script>
+      
+  </head>
+  
+  
+  <body>
+    <section class="container">
+      <h1 class = "center" >Welcome to QA Course</h1>
+      <h6 class="center">This page is a simple html css page used for testing </h6>
+      <hr>
+      <div class="div_content">
+        <h3> Available Drinks</h3>
+        <ul>
+          <li class="option cofee">Coffee</li>
+          <li class="option water">Water</li>
+          <li class="option tea">Tea</li>
+          <li class="option milk">Milk</li>
+        </ul>
+      </div>
+      <hr>
+      <div class="div_content">
+        <h3> Personal Information </h3>
+        <input type="text" placeholder="Type your name">
+        <br>
+        <br>
+        <input type="number" placeholder="Type your age">
+        <br>
+        <br>
+        <label for="country">Country:</label>
+        <select name="country" id="country">
+          <option value="palestine_country">Palestine</option>
+          <option value="jordan_country">Jordan</option>
+          <option value="egypt_country">Egypt</option>
+        </select>
+      </div>
+      <hr>
+      <div class="div_content">
+        <p id ="simple_par">QA From Zero To Hero</p>
+        <a class="google" href="https://www.google.com"> Visit Google </a>
+        </div>
+      <hr>
+      <div class="div_content">
+        <div class="box"> 
+            <div class="overlay">
+                <button type="button" class="btn" id="btn0" onclick="clickBtn0()">
+                    Zero </button> 
+                <input type="text" name="input_0"/>
+                <input type="checkbox" id="checkMe" name="box1" value="Check Me">
+                <label for="box1"> Check Me ! </label><br>              
+            </div>
+        </div>
+     
+      </div>
+      <hr>
+      <div class="div_content">
+      <button type="button" class="btn" id="btn1" onclick="clickBtn1()" onmousedown="clickBtn1()">
+        First
+      </button>
+      <button type="button" class="btn" id="btn2" onclick="clickBtn2()">
+        Second
+      </button>
+      <button type="button" class="btn" id="btn3" onclick="clickBtn3()">
+        Third 
+      </button>
+      <br>
+</div>
+<hr>
+<div class="div_content checkboxes">
+  <h3> What is your favorite Snack ?</h3>
+
+  <input type="checkbox" id="Banana" name="snack1" value="Banana">
+  <label for="snack1"> Banana </label><br>
+  <input type="checkbox" id="Nuts" name="snack2" value="Nuts">
+  <label for="snack2"> Nuts </label><br>
+  <input type="checkbox" id="Fries" name="snack3" value="Fries">
+  <label for="snack3"> Fries </label><br><br>
+  
+  <input type="checkbox" id="orange" name="snack4" value="or">
+  <label for="snack1"> orange </label><br>
+  <input type="checkbox" id="lemon" name="snack5" value="le">
+  <label for="snack2"> lemon </label><br>
+  <input type="checkbox" id="apple" name="snack6" value="ap">
+  <label for="snack3"> apple </label><br><br>
+</div>
+<hr>
+<div class="div_content">
+  <h3> Are You ... </h3>
+
+  <input type="radio" id="developer" name="job" value="developer">
+  <label for="job1"> Developer </label><br>
+  <input type="radio" id="tester" name="job" value="Tester">
+  <label for="job2"> Tester </label><br>
+</div>
+<hr>
+
+<div class="div_content" >
+  <h3> Double Click </h3>
+  <button class="btn" id="dbClick" ondblclick="dbClickButton()">Click Me</button> 
+</div>
+<hr>
+<div class="div_content" >
+  <h3>Focus And Blur </h3>
+  <input id="myTextField" onblur="changeInputColor1(this)" onfocus="changeInputColor(this) "/>
+</div>
+
+<hr>
+<div class="div_content" >
+  <h3>Trigger Playground </h3>
+  <button class="btn" id="trigger_btn" onmouseover="changeBtnColor(this)" onmouseleave="maximizeBtn(this)"> Trigger </button>
+</div>
+    </section>
+  </body>
+</html>
