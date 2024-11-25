@@ -9,5 +9,9 @@ module.exports = defineConfig({
     // viewportWidth: 550,
     // viewportHeight : 550,
     // watchForFileChanges : true
+    screenshotOnRunFailure:true,
+    screenshotsFolder:"MyScreenShotsFolder",
+    trashAssetsBeforeRuns:true
+
   },
 });
