@@ -9,9 +9,20 @@ module.exports = defineConfig({
     // viewportWidth: 550,
     // viewportHeight : 550,
     // watchForFileChanges : true
-    screenshotOnRunFailure:true,
+    screenshotOnRunFailure:false,
     screenshotsFolder:"MyScreenShotsFolder",
-    trashAssetsBeforeRuns:true
+    trashAssetsBeforeRuns:true,
+    video:false,
+    videosFolder:"myVideo",
+    videoCompression :0 , 
+    reporter: "mochawesome",
+    reporterOptions: {
+      reportDir: "cypress/myReport", // where to save in directory
+      overwrite: false,
+      html: true,
+      json: false,
+      timestamp: "mmddyyyy_HHMMss"
+    }
 
   },
 });

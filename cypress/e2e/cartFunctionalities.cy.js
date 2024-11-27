@@ -29,7 +29,7 @@ describe('Cart Functionalities', () => {
     it('Validate that the user can delete product', () => {
        cy.get(".showcart").click();
        cy.get("[title='Remove item']").click();
-       cy.get(".action-acceptyyy").click()
+       cy.get(".action-accept").click()
        cy.get(".subtitle.empty").should("contain","You have no items in your shopping cart.")
        cy.get(".counter-number").should("be.hidden") 
 
