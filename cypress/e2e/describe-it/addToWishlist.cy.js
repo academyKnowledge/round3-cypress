@@ -1,9 +1,9 @@
 /// <reference types="cypress" />
 describe('Add to wishlist functionality', () => {
     before(()=>{
-        const email = "CypressUser@gmail.com";
-        const pass = "test@123";
-        cy.loginToMagento(email,pass)
+        cy.loginToMagento()
+
+
         // cy.loginToMagento("CypressUser@gmail.com","test@123")
     
     })

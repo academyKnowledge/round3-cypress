@@ -1,21 +1,30 @@
 import { Given , When , Then } from "cypress-cucumber-preprocessor/steps";
+import loginActions from "../../../../support/PageObjects/login/actions.cy";
+import sharedAssertions from "../../../../support/PageObjects/shared/assertions.cy";
+
+const loginAction = new loginActions();
+const sharedAssertion = new sharedAssertions()
+
+const myEmail = "CypressUser@gmail.com"; 
+const myPassword = "test@123";
+const pageTitleValue = "My Account";
 
 Given("The user navigate to sign in page in magento website",()=>{
-    cy.visit("/customer/account/login/")
+    loginAction.openLoginPage();
 })
 
 When("The user types email in email input field",()=>{
-    cy.get("#email").type("CypressUser@gmail.com") 
+    loginAction.typeInEmailInputField(myEmail)
 })
 
 When("The user types password in password input field",()=>{
-    cy.get("#pass").type("test@123") 
+    loginAction.typeInPasswordInputField(myPassword)
 })
 
 When("The user clicks on sign in button",()=>{
-    cy.get("#send2").click()
+    loginAction.clickOnSignInButton()
 })
 
 Then("The user will redirected to My Account page",()=>{
-    cy.get(".page-title").should("contain","My Account")
+    sharedAssertion.checkPageTitleIsContain(pageTitleValue);
 })
