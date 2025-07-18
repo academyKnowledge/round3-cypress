@@ -33,3 +33,25 @@ Cypress.Commands.add('loginToMagento', () => {
     })
     cy.get("#send2").click();
 })
+
+
+
+
+
+
+
+
+Cypress.Commands.add('loginToTrello', () => { 
+   // eng.razanbalatiah96@gmail.com
+   // qa!@#$%^&*
+
+    cy.visit("https://id.atlassian.com/login")
+      cy.get('[name=username]').type("eng.razanbalatiah96@gmail.com");
+      
+      cy.get('#login-submit').click();
+      cy.get('#password').type("qa!@#$%^&*"+"{enter}");  
+      cy.get('#login-submit').click();
+      cy.wait(50000)
+      cy.get(".css-sefnzj").eq(2).click();
+   
+})
